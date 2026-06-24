@@ -1,26 +1,48 @@
-# 📊  Data Cleaning & Preprocessing Pipeline
+# 📈 Salary Prediction using Linear Regression
 
-An enterprise-level data engineering pipeline designed to automate data cleaning, normalization, and feature scaling for server logs and system metrics.
+A Supervised Machine Learning project that predicts an employee's salary based on their years of experience. The model is trained on a dataset sourced from Kaggle and evaluated using key regression metrics and data visualization.
 
 ---
 
 ## 🚀 Project Overview
-Raw server logs and system metrics often contain missing values, inconsistent formats, and varying scales that can break downstream AI/ML models. This project implements a robust Python pipeline using **Pandas** and **NumPy** to clean, format, and structure the data for analytical workloads.
+The goal of this project is to understand the linear relationship between years of professional experience and salary. Using Python's data science stack, we built a predictive model and visualized how the model fits the actual data points.
 
-### 🛠️ Key Features Built
-* **Data Cleaning:** Programmatic handling of missing values, null inputs, and system anomalies.
-* **Feature Scaling:** Implemented **Min-Max Feature Scaling** to normalize numerical values between a 0 and 1 range.
-* **Dataset Concatenation:** Merged multiple data chunks dynamically into a single structured enterprise dataset.
+### 🛠️ Core Steps Implemented
+* **Model Training:** Implemented a **Linear Regression** algorithm using Scikit-Learn.
+* **Data Visualization:** Built data plots using **Matplotlib** to analyze model behavior.
+* **Model Serialization:** Exported the final trained model into a binary `.pkl` file using Joblib for future deployment.
+
+---
+
+## 🤖 Machine Learning Pipeline & Metrics
+
+### 📊 Dataset Variables
+* **Independent Variable (X):** `Years_of_Experience`
+* **Dependent Variable (Y):** `Salary` (Target)
+
+### 📉 Model Evaluation & Performance
+* **R-squared Score:** **0.8914** (Indicates that ~89% of the variance in salary is predictable from experience).
+* **Mean Squared Error (MSE):** 55,761,791.31
+* **Root Mean Squared Error (RMSE):** 7,467.38
+* **Mean Absolute Error (MAE):** 6,692.36
+
+---
+
+## 🖼️ Data Visualization
+To check the model accuracy visually, **Matplotlib** was used to generate plots:
+* **`plt.scatter` (Scatter Plot):** Used to plot the actual data points showing the true relationship between experience and salary.
+* **`plt.plot` (Regression Line):** Used to draw the best-fit prediction line over the data points to show how the model predicts values.
 
 ---
 
 ## 📂 Repository Structure
-* `cleaned_enterprise_data.csv` -> The final processed and structured dataset ready for AI models.
-* `README.md` -> Project documentation and workflow explanation.
+* `myLinearmodel.pkl` -> Trained Linear Regression model file.
+* `README.md` -> Project documentation.
 
 ---
 
 ## ⚡ Technical Skills Demonstrated
 * **Languages:** Python
-* **Libraries:** Pandas, NumPy
-* **Methodologies:** Data Preprocessing, Feature Engineering, Automation Scripts
+* **ML Libraries:** Scikit-Learn (Sklearn), Joblib
+* **Data Visualization:** Matplotlib (Pyplot)
+* **Core Concepts:** Supervised Learning, Regression Analysis, Model Evaluation Metrics
